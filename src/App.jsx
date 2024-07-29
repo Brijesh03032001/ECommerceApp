@@ -5,6 +5,7 @@ import "./App.css";
 import Navigation from "./customer/components/Navigate/Navigation";
 import Homepage from "./customer/pages/HomePage/Homepage";
 import Footer from "./customer/components/Footer/Footer";
+import Product from "./customer/components/Product/Product";
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
         <Navigation />
 
         <div>
-          <Homepage />
+          {/* <Homepage /> */}
+          <Product />
         </div>
         <Footer />
       </div>
