@@ -1,3 +1,28 @@
+// module.exports = {
+//   root: true,
+//   env: { browser: true, es2020: true },
+//   extends: [
+//     "eslint:recommended",
+//     "plugin:react/recommended",
+//     "plugin:react/jsx-runtime",
+//     "plugin:react-hooks/recommended",
+//     "plugin:jsx-a11y/recommended",
+//   ],
+//   ignorePatterns: ["dist", ".eslintrc.cjs"],
+//   parserOptions: { ecmaVersion: "latest", sourceType: "module" },
+//   settings: { react: { version: "18.2" } },
+//   plugins: ["react-refresh"],
+//   rules: {
+//     "react/jsx-no-target-blank": "off",
+//     "react-refresh/only-export-components": [
+//       "warn",
+//       { allowConstantExport: true },
+//     ],
+
+//     "react/prop-types": "off", // Disable prop-types validation
+//     "no-unused-vars": "warn", // Disable no-unused-vars rule
+//   },
+// };
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
@@ -18,8 +43,7 @@ module.exports = {
       "warn",
       { allowConstantExport: true },
     ],
-
-    "react/prop-types": "off", // Disable prop-types validation
-    "no-unused-vars": "off", // Disable no-unused-vars rule
+    "react/prop-types": "off",
+    "no-unused-vars": "off",
   },
 };
