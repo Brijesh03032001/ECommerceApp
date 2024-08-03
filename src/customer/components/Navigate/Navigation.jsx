@@ -17,6 +17,7 @@ import { deepPurple } from "@mui/material/colors";
 // import { getCart } from "../../../Redux/Customers/Cart/Action";
 import TextField from "@mui/material/TextField";
 import { navigation } from "./navigation";
+import { useNavigate } from "react-router-dom";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -31,6 +32,7 @@ export default function Navigation() {
   const [anchorEl, setAnchorEl] = useState(null);
   const openUserMenu = Boolean(anchorEl);
   const jwt = localStorage.getItem("jwt");
+  const navigate = useNavigate();
   // const location = useLocation();
 
   // useEffect(() => {
@@ -55,7 +57,7 @@ export default function Navigation() {
   // };
 
   const handleCategoryClick = (category, section, item, close) => {
-    // navigate(`/${category.id}/${section.id}/${item.id}`);
+    navigate(`/${category.id}/${section.id}/${item.id}`);
     close();
   };
 
@@ -366,7 +368,8 @@ export default function Navigation() {
                                                 key={item.name}
                                                 className="flex"
                                               >
-                                                <p onClick={() =>
+                                                <p
+                                                  onClick={() =>
                                                     handleCategoryClick(
                                                       category,
                                                       section,
@@ -444,7 +447,8 @@ export default function Navigation() {
                         }}
                       >
                         {/* <MenuItem onClick={handleMyOrderClick}> */}
-                        <MenuItem>
+                        <MenuItem>Profile</MenuItem>
+                        <MenuItem onClick={() => navigate("/account/order")}>
                           {/* {auth.user?.role === "ROLE_ADMIN"
                             ? "Admin Dashboard"
                             : "My Orders"} */}
